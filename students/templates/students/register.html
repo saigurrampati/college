@@ -1,0 +1,19 @@
+<form action="/students/save_details/" method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+
+    Name <input type="text" name="name"><br>
+    mobile<input type="text" name="phone"><br>
+    Email<input type="text" name="email"><br>
+    department:
+    <select name="code">
+    {% for each in deps %}
+        <option value={{each.code}}>{{each.code}}</option>
+    {% endfor %}
+</select><br>
+    photo<input type="file" name="image"><br>
+    username<input type="text" name="username"><br>
+    password<input type="text" name="password"><br>
+
+    <input type="submit" value="Register"><br>
+</form>
+    <a href="/students/">Back</a>

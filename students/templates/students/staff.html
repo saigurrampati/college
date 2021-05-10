@@ -1,0 +1,21 @@
+{% if error%}
+<h3>{{error}}</h3>
+{% endif %}
+
+<form action="/students/save_staff/" method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+
+    Name <input type="text" name="name"><br>
+    email <input type="text" name="email"><br>
+    mobile<input type="text" name="phone"><br>
+    department:<input type="text" name="department"><br>
+    Qualification<input type="text" name="qualification"><br>
+    experience<input type="text" name="experience"><br>
+    Photo<input type="file" name="photo"><br>
+    username<input type="text" name="username"><br>
+    password<input type="password" name="password"><br>
+
+    <input type="submit" value="Register"><br>
+
+</form>
+    <a href="/students/">Back</a>
